@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.24;
+
+contract StakingAPRCalculator {
+
+    function calculateAPR(uint256 stakingRewards, uint256 totalStakedAmount) public pure returns(uint256) {
+      uint256 aprNumerator = stakingRewards * 365;
+      return (aprNumerator * 100) / totalStakedAmount;
+    }
+}
+
+
